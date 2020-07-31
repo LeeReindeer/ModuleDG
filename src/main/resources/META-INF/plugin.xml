@@ -1,0 +1,36 @@
+<idea-plugin>
+    <id>moe.leer.moduledg</id>
+    <name>ModuleDG</name>
+    <vendor email="LeeReix@live.com" url="https://leer.moe">LeeR</vendor>
+
+    <description><![CDATA[
+    Generate self modules dependencies graph.
+    ]]></description>
+
+    <change-notes><![CDATA[
+    First Release!<br>
+    Usage: Analyze -> Module Graph...
+    ]]>
+    </change-notes>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <project-components>
+        <component>
+            <implementation-class>moe.leer.moduledg.ModuleGraphController</implementation-class>
+        </component>
+    </project-components>
+
+    <actions>
+        <action id="modulegd.modulegraph" class="moe.leer.moduledg.ModuleGraphAction" text="Module Graph..."
+                description="Generate module  depdency graph">
+            <add-to-group group-id="AnalyzeActions" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>
