@@ -4,4 +4,4 @@
 
 ## Usage 
 
-Analyse -> ModuleDG
+Analyze -> Module Graph..
